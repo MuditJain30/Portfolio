@@ -76,7 +76,7 @@ header nav ul li a:hover {
 
 .btn-primary1 {
   background-color: #ff9900;
-  color: #fff;
+  color: black;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -93,7 +93,7 @@ header nav ul li a:hover {
 
 #projects {
   padding: 50px 20px;
-  background-color: #fff;
+  background-color: #f5f5f5;
   text-align: center;
 }
 
@@ -105,7 +105,7 @@ header nav ul li a:hover {
 }
 
 .project {
-  background-color: #f5f5f5;
+  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   width: 45%;
@@ -129,13 +129,13 @@ header nav ul li a:hover {
 
 #Recommendations {
   padding: 50px 20px;
-  background-color: #fff;
+  background-color: #f5f5f5;
   text-align: center;
 }
 
 #contact {
   padding: 50px 20px;
-  background-color: #fff;
+  background-color: #f5f5f5;
 }
 
 .contact-container {
@@ -146,7 +146,7 @@ header nav ul li a:hover {
 
 .form-container,
 .contact-info {
-  background-color: #f5f5f5;
+  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   width: 48%;
@@ -168,13 +168,14 @@ form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
+  background-color: #f5f5f5;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 .btn-submit {
   background-color: #ff9900;
-  color: white;
+  color: black;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -190,8 +191,8 @@ form textarea {
 }
 
 footer {
-  background-color: #333;
-  color: white;
+  background-color: #f5f5f5;
+  color: black;
   padding: 20px 0;
   text-align: center;
 }
@@ -203,9 +204,44 @@ footer {
   align-items: center;
 }
 
-.social-icons img,
-.rating-icons img {
-  margin-right: 10px;
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.quick-links a {
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.rating-icons{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.social-icons{
+  color:#555;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.social-icons a{
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.rating-icons img{
+  vertical-align: middle;
+  margin-right: 5px; 
+}
+
+.social-icons img{
+  vertical-align: middle;
+  margin-right: 5px; 
 }
 
 footer a {
@@ -220,6 +256,7 @@ footer a:hover {
 
 footer p {
   margin-top: 20px;
+  color: #555;
 }
 
 .carousel {

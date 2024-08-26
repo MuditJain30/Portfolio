@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <img src="project1.jpg" alt="Header Image">
+        <img src="/home-page/assets/Logo.png" alt="Header Image">
         <nav>
             <ul>
                 <li><a href="http://127.0.0.1:5500/home-page/index.html">Home</a></li>
@@ -64,10 +64,50 @@
                 <span>HTML, JavaScript, ReactJS, CSS</span>
             </div>
         </div>
-        <button class="btn-primary" style="align-items: center;">ADD SKILL</button>
+        <button class="btn-primary" id="openModal" style="align-items: center;">ADD SKILL</button>
+        <!DOCTYPE html>
+
+    <!-- Modal Structure -->
+    <div id="addSkillModal" class="modal">
+        <div class="modal-content">
+            <h2>Add Skill</h2>
+            <form id="addSkillForm">
+                <label for="domain">Domain</label>
+                <input type="text" id="domain" name="domain" placeholder="Front End Developer" required>
+
+                <h3>Skills</h3>
+                <div id="skillsWrapper">
+                    <div class="skill-input">
+                        <input type="text" name="skill[]" placeholder="Skill" required>
+                        <input type="number" name="proficiency[]" placeholder="Proficiency (%)" min="0" max="100" required>
+                    </div>
+                </div>
+                <button type="button" id="addSkillRow">+ Add Another Skill</button>
+                <div class="modal-footer">
+                    <button type="submit" class="btn-primary">ADD SKILL</button>
+                    <button type="button" class="btn-cancel" id="cancelModal">CANCEL</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    
+    
+    
+    
+    
+    
+    
     </section>
 
+
+
     <footer>
+        <div>
+            <img src="/home-page/assets/4Logo.png" alt="footer Image">
+        </div>
         <div class="footer-container">
             <div class="rating-icons">
                 <img src="rating-icon1.png" alt="Rating">
@@ -107,6 +147,6 @@
 
 
     </section>
-
+    <script src="index.js"></script>
 </body>
 </html>
