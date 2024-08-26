@@ -107,6 +107,7 @@ h2 {
 .skill-info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 5px;
 }
 
@@ -116,24 +117,21 @@ h2 {
 }
 
 .progress-bar {
-  background-color: #e0e0e0;
-  border-radius: 5px;
-  margin: 0 10px;
-  overflow: hidden;
-  height: 5px;
+  background-color: #f1f1f1;
+  border-radius: 30px;
+  height: 8px;
   width: 100%;
+  margin-top: 5px;
+  border: 1px solid #ffc107; /* Border color for the outer container */
+  padding: 1.5px;
 }
 
 .progress {
-  background-color: #ffc107; /* Yellow color */
-  height: 100%;
-  border-radius: 5px;
+  background-color: #ffc107;
+  height: 90%;
+  border-radius: 30px;
 }
 
-.percentage {
-  font-size: 0.9em;
-  color: #333;
-}
 
 
 .btn-primary {
@@ -340,7 +338,8 @@ footer {
   align-items: flex-start;
   width: 23%;
 }
-.rating-icons img{
+
+.rating-icons img {
   margin-top: 20px;
 }
 
