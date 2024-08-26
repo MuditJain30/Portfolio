@@ -187,7 +187,7 @@ header nav ul li a {
 .form-container{
   padding: 20px;
   border-radius: 8px;
-  width: 80%;
+  width: 120%;
 }
 .form-container form{
   background-color: white;
@@ -197,7 +197,7 @@ header nav ul li a {
 
 h2 {
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 30px;
 }
 
 form label {
@@ -279,7 +279,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .quick-links {
