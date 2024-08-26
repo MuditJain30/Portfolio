@@ -17,7 +17,7 @@ header {
   left: 0;
   right: 0;
   background-color: white;
-  padding: 30px 50px;
+  padding: 30px 100px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   width: 100vw;
@@ -61,17 +61,18 @@ header nav ul li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 40px;
+  padding-inline: 100px;
   background-color: white;
 }
 
 .intro {
+  margin-top: 100px;
   max-width: 50%;
 }
 
 .intro h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 40px;
+  margin-bottom: -10px;
 }
 
 .highlight {
@@ -79,7 +80,7 @@ header nav ul li a {
 }
 
 .intro p {
-  margin-bottom: 20px;
+  margin-block: 80px;
 }
 
 .btn-primary1 {
@@ -114,32 +115,47 @@ header nav ul li a {
 .description{
   line-height: 1.5;
   color: #767676;
-  width:28%;
+  width:50%;
+  margin-bottom: 35px;
   text-align: center;
 }
 
 .projects-container {
   display: flex;
-  gap: 20px;
+  gap: 35px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 35px;
 }
 
 .project {
+  box-shadow: 2px 2px 5px rgb(189, 189, 189);
   background-color: #fff;
-  padding: 20px;
   border-radius: 8px;
-  width: 45%;
+
+  h3{
+    font-weight: 500;
+  }
+  p{
+    color: #767676;
+  }
+}
+.chips-container .chips{
+  display: inline-block;
+  margin-block: 5px;
+  color: black;
+  background-color: #EFEFEF;
+  padding: 4px 13px; 
+  border-radius: 1000px;
+  border: #0000000D 1px solid;
+  font-size: 15px;
+}
+.project-info{
+  padding: 10px 15px 10px 15px;
 }
 
 .project img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.project h3 {
-  margin: 15px 0;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
 }
 
 .project span {
@@ -164,14 +180,18 @@ header nav ul li a {
 .contact-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
 }
 
 .form-container{
-  background-color: white;
   padding: 20px;
   border-radius: 8px;
   width: 80%;
+}
+.form-container form{
+  background-color: white;
+  padding: 20px;
 }
 
 
@@ -225,9 +245,28 @@ form textarea {
 }
 
 .info-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   background-color: white;
   border-radius: 5px;
   padding: 20px 20px;
+}
+.infocard-icon{
+  background-color: #FFB400;
+  border-radius: 1000px;
+  width: 40px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-text{
+  color: #767676;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 footer {
@@ -256,10 +295,15 @@ footer {
 }
 
 .rating-icons {
+  font-size: 13px;
   color: #767676;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 23%;
+}
+.rating-icons img{
+  margin-top: 20px;
 }
 
 .social-icons {
