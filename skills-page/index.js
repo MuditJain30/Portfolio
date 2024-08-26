@@ -1,4 +1,4 @@
-document.getElementById('openModal').addEventListener('click', function() {
+/*document.getElementById('openModal').addEventListener('click', function() {
     const form = document.getElementById('addSkillForm');
     form.reset();
     
@@ -62,4 +62,62 @@ document.getElementById('addSkillForm').addEventListener('submit', function(even
         alert('Skill added successfully!');
         document.getElementById('addSkillModal').style.display = 'none';
     }
+});*/
+
+
+
+
+
+
+// Open the modal and reset the form
+document.getElementById('openModal').addEventListener('click', function() {
+    const form = document.getElementById('addSkillForm');
+    form.reset();
+    
+    document.getElementById('addSkillModal').style.display = 'flex';
 });
+
+// Close the modal
+document.getElementById('cancelModal').addEventListener('click', function() {
+    document.getElementById('addSkillModal').style.display = 'none';
+});
+
+// Add a new skill row
+
+// Handle form submission
+document.getElementById('addSkillForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const domain = document.getElementById('domain').value;
+    const skills = document.querySelectorAll('input[name="skill[]"]');
+    const proficiencies = document.querySelectorAll('input[name="proficiency[]"]');
+
+    let valid = true;
+    
+    // Validate Domain
+    if (domain.trim() === '') {
+        valid = false;
+        alert('Domain is required.');
+    }
+
+    // Validate Skills and Proficiency
+    skills.forEach((skill, index) => {
+        if (skill.value.trim() === '') {
+            valid = false;
+            alert('Skill is required.');
+        }
+
+        const proficiency = proficiencies[index].value;
+        if (proficiency === '' || proficiency < 0 || proficiency > 100) {
+            valid = false;
+            alert('Proficiency must be between 0 and 100.');
+        }
+    });
+
+    if (valid) {
+        // Logic for submitting the form or processing the skills
+        alert('Skill added successfully!');
+        document.getElementById('addSkillModal').style.display = 'none';
+    }
+});
+

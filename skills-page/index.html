@@ -13,7 +13,7 @@
         <nav>
             <ul>
                 <li><a href="http://127.0.0.1:5500/home-page/index.html">Home</a></li>
-                <li><a href="http://127.0.0.1:5500/skills-page/index.html">Skills</a></li>
+                <li><a href="http://127.0.0.1:5500/skills-page/index.html" class="active-page">Skills</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#recommendations">Recommendations</a></li>
@@ -23,7 +23,7 @@
     </header>
     <section id="projects">
         <h2>Skills & Languages</h2>
-        <div style="margin-bottom: 30px; margin-left: 280px; margin-right: 280px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam dolor quaerat aliquam vel sunt enim molestiae ex et, possimus reprehenderit voluptas praesentium ipsum veritatis nihil dolorum cupiditate. Aliquam, itaque provident.</div>
+        <p class="description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</p>
         <div class="projects-container">
             <div class="project">
                 <img src="project1.jpg" alt="Project 1">
@@ -65,11 +65,10 @@
             </div>
         </div>
         <button class="btn-primary" id="openModal" style="align-items: center;">ADD SKILL</button>
-        <!DOCTYPE html>
 
     <!-- Modal Structure -->
     <div id="addSkillModal" class="modal">
-        <div class="modal-content">
+        <!--<div class="modal-content">
             <h2>Add Skill</h2>
             <form id="addSkillForm">
                 <label for="domain">Domain</label>
@@ -88,7 +87,48 @@
                     <button type="button" class="btn-cancel" id="cancelModal">CANCEL</button>
                 </div>
             </form>
-        </div>
+        </div>-->
+        <h1>Add Skill</h1>
+        <form id="addSkillForm">
+            <div class="form-group">
+                <label for="domain">Domain</label>
+                <input type="text" id="domain" name="domain" placeholder="Front End Developer" disabled>
+            </div>
+
+            <div class="skills-section">
+                <label>Skills</label>
+                <div class="skills-header">
+                    <span>Skill</span>
+                    <span>Proficiency (%)</span>
+                </div>
+
+                <div class="skills-row">
+                    <input type="text" placeholder="Enter skill" class="skill-input">
+                    <input type="number" placeholder="%" class="proficiency-input">
+                </div>
+                <div class="skills-row">
+                    <input type="text" placeholder="Enter skill" class="skill-input">
+                    <input type="number" placeholder="%" class="proficiency-input">
+                </div>
+                <div class="skills-row">
+                    <input type="text" placeholder="Enter skill" class="skill-input">
+                    <input type="number" placeholder="%" class="proficiency-input">
+                </div>
+                <div class="skills-row">
+                    <input type="text" placeholder="Enter skill" class="skill-input">
+                    <input type="number" placeholder="%" class="proficiency-input">
+                </div>
+                <div class="skills-row">
+                    <input type="text" placeholder="Enter skill" class="skill-input">
+                    <input type="number" placeholder="%" class="proficiency-input">
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="add-skill-btn">ADD SKILL</button>
+                <button type="button" class="cancel-btn">CANCEL</button>
+            </div>
+        </form>
     </div>
 
 
@@ -108,45 +148,43 @@
         <div>
             <img src="/home-page/assets/4Logo.png" alt="footer Image">
         </div>
+        <div style="display: flex; margin-top: 20px; margin-bottom: 20px;">
+            <img src="/home-page/assets/Logo.png" alt="main logo" style="width: 100px;">
+        </div>
         <div class="footer-container">
             <div class="rating-icons">
-                <img src="rating-icon1.png" alt="Rating">
-                <img src="rating-icon2.png" alt="Rating">
-                <img src="rating-icon3.png" alt="Rating">
+                <img src="/home-page/assets/Rectangle 97.png" alt="Rating">
+                4.5/5 rating on Lorem
+                <img src="/home-page/assets/Rectangle 99.png" alt="Rating">
+                9/10 rating on Ipsum
+                <img src="/home-page/assets/Rectangle 100.png" alt="Rating">
+                4.5/5 Rating on dorel
             </div>
             <div class="quick-links">
                 <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="http://127.0.0.1:5500/home-page/index.html">Home</a></li>
-                    <li><a href="http://127.0.0.1:5500/skills-page/index.html">Skills</a></li>
-                    <li><a href="#">Education</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Recommendations</a></li>
-                </ul>
+                <a href="http://127.0.0.1:5500/home-page/index.html">Home</a>
+                <a href="http://127.0.0.1:5500/skills-page/index.html">Skills</a>
+                <a href="#">Education</a>
+                <a href="#">Projects</a>
+                <a href="#">Recommendations</a>
             </div>
             <div class="quick-links">
                 <h3>Portfolio</h3>
-                <ul>
-                    <li><a href="#">Frontend Development</a></li>
-                    <li><a href="#">Backend Development</a></li>
-                    <li><a href="#">Website Design</a></li>
-                    <li><a href="#">Machine Learning</a></li>
-                    <li><a href="#">Problem Solving & DSA</a></li>
-                </ul>
+                <a href="#">Frontend Development</a>
+                <a href="#">Backend Development</a>
+                <a href="#">Website Design</a>
+                <a href="#">Machine Learning</a>
+                <a href="#">Problem Solving & DSA</a>
             </div>
             <div class="social-icons">
                 <h3>Connect</h3>
-                <img src="glasses-icon.png" alt="Logo">
-                <a href="#">LinkedIn</a>
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
+                <a href="https://www.linkedin.com/in/mudit-jain-4855b5245"><img src="/home-page/assets/LinkedIn.png" alt="Logo"></a>
+                <a href="https://www.instagram.com/muditjain_30/"><img src="/home-page/assets/Instagram.png" alt="Logo"></a>
+                <a href="https://www.facebook.com/mudit.jain.716"><img src="/home-page/assets/Facebook.png" alt="Logo"></a>
             </div>
         </div>
         <p>&copy; 2024 Copyright, All Rights Reserved</p>
     </footer>
-
-
-    </section>
     <script src="index.js"></script>
 </body>
 </html>
