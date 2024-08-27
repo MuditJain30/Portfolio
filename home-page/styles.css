@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
   background-color: #f0f0f6;
@@ -81,6 +81,8 @@ header nav ul li a {
 
 .intro p {
   margin-block: 80px;
+  width: 38vw;
+  color: #767676;
 }
 
 .btn-primary1 {
@@ -89,6 +91,44 @@ header nav ul li a {
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+}
+
+.top-left{
+  position: absolute;
+  top: 150px;
+  left: 50px;
+}
+.top-center{
+  position: absolute;
+  top: 180px;
+  left: 820px;
+}
+.top-right{
+  position: absolute;
+  top:200px;
+  left:1360px;
+}
+.bottom-left{
+  position: absolute;
+  bottom: 35px;
+  left: 110px;
+}
+.bottom-center{
+  position: absolute;
+  bottom:170px;
+  left:520px;
+}
+.bottom-center2{
+  position: absolute;
+  bottom:92px;
+  left:882px;
+  z-index: 2;
+}
+.bottom-right{
+  position: absolute;
+  bottom:35px;
+  left:1400px;
+  z-index: 2;
 }
 
 .hero-image {
@@ -112,10 +152,18 @@ header nav ul li a {
   flex-direction: column;
 }
 
-.description{
+.description1{
   line-height: 1.5;
   color: #767676;
   width:50%;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.description2{
+  line-height: 1.5;
+  color: #767676;
+  width:42%;
   margin-bottom: 35px;
   text-align: center;
 }
@@ -203,7 +251,7 @@ h2 {
 form label {
   display: block;
   margin-bottom: 5px;
-  color: #333;
+  color: #767676;
 }
 
 form input,
