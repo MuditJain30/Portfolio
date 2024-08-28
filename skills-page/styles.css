@@ -169,7 +169,7 @@ h2 {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 1000001;
   left: 0;
   top: 0;
   width: 100%;
@@ -180,11 +180,15 @@ h2 {
 
 .modal-content {
   background-color: #fff;
-  margin: 15% auto;
+  margin: 1% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 500px;
+  max-width: 700px;
+  border-radius: 5px;
+}
+.modal-content h2{
+  text-align: center;
 }
 
 .skill-input-row {
@@ -192,12 +196,48 @@ h2 {
   gap: 10px;
   margin-bottom: 10px;
 }
+.skill-input-row input[type="text"] {
+  flex: 1;
+}
+.skill-input-row input[type="number"] {
+  width: 20%;
+}
 
-.skill-input-row input {
+.modal input {
   width: 100%;
+  background-color: #F0F0F6;
+  height: 30px;
+  padding: 30px 10px;
+  border: none;
+  border-radius: 5px;
+}
+.modal-submit{
+  background-color: #FFB400;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+}
+.modal-btn-container{
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+.modal-cancel{
+  background-color: white;
+  color: #FF5252;
+  padding: 12px 38px;
+  border: 1px solid #FF5252;
+  border-radius: 5px;
+}
+.modal-headings{
+  font-size: 14px;
+  margin-block: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 button {
+  cursor: pointer;
   margin-top: 10px;
   padding: 10px;
 }

@@ -228,11 +228,14 @@
                 <form id="addSkillForm">
                     <div>
                         <label for="domain">Domain</label>
-                        <input type="text" id="domain" name="domain" placeholder="Front End Developer" required>
+                        <input style="margin-block: 12px;" type="text" id="domain" name="domain" placeholder="Front End Developer" required>
                     </div>
                     <div>
-                        Skills
-                        <p>Skill</p>
+                        <p=>Skills</p>
+                        <div class="modal-headings">
+                            <p>Skill</p>
+                            <p>Proficiency(%)</p>
+                        </div>
                      </div>
                     <div id="skillsInputs">
                         <div class="skill-input-row">
@@ -256,8 +259,10 @@
                             <input type="number" name="proficiency">
                         </div>
                     </div>
-                    <button type="submit">Add Skill</button>
-                    <button type="button" id="cancelModal">Cancel</button>
+                    <div class="modal-btn-container">
+                        <button class="modal-submit" type="submit">ADD SKILL</button>
+                    <button class="modal-cancel" type="button" id="cancelModal">CANCEL</button>
+                    </div>
                 </form>
             </div>
         </div>
