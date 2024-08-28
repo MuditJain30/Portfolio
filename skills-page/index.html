@@ -32,7 +32,7 @@
         <h2>Skills & Languages</h2>
         <p class="description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
             consequat duis enim velit mollit. lorem ipsum</p>
-        <div class="skills-container">
+        <div id="skill-container" class="skills-container">
             <div class="skill-category">
                 <h3>Front End Development</h3>
                 <div class="skill">
@@ -218,32 +218,50 @@
                     </div>
                 </div>
             </div>
+
         </div>
         <button class="btn-primary" id="openModal" style="align-items: center;">ADD SKILL</button>
 
-        <!-- Modal Structure -->
-        <div id="addSkillModal" class="modal">
+        <div id="skillModal" class="modal">
             <div class="modal-content">
                 <h2>Add Skill</h2>
-                <div class="modal-body">
-                    <label for="domain">Domain</label>
-                    <input type="text" id="domain" value="Front End Development" disabled>
-                    <label for="skill">Skill</label>
-                    <input type="text" id="skill" placeholder="Enter skill name">
-                    <label for="proficiency">Proficiency (%)</label>
-                    <input type="number" id="proficiency" min="0" max="100" placeholder="Enter proficiency percentage">
-                </div>
-                <div class="modal-footer">
-                    <button id="addSkillButton" class="btn-primary">Add Skill</button>
-                    <button id="closeModal" class="btn-secondary">Cancel</button>
-                </div>
+                <form id="addSkillForm">
+                    <div>
+                        <label for="domain">Domain</label>
+                        <input type="text" id="domain" name="domain" placeholder="Front End Developer" required>
+                    </div>
+                    <div>
+                        Skills
+                        <p>Skill</p>
+                     </div>
+                    <div id="skillsInputs">
+                        <div class="skill-input-row">
+                            <input type="text" name="skill"  required>
+                            <input type="number" name="proficiency" required>
+                        </div>
+                        <div class="skill-input-row">
+                            <input type="text" name="skill" >
+                            <input type="number" name="proficiency">
+                        </div>
+                        <div class="skill-input-row">
+                            <input type="text" name="skill" >
+                            <input type="number" name="proficiency">
+                        </div>
+                        <div class="skill-input-row">
+                            <input type="text" name="skill" >
+                            <input type="number" name="proficiency">
+                        </div>
+                        <div class="skill-input-row">
+                            <input type="text" name="skill" >
+                            <input type="number" name="proficiency">
+                        </div>
+                    </div>
+                    <button type="submit">Add Skill</button>
+                    <button type="button" id="cancelModal">Cancel</button>
+                </form>
             </div>
         </div>
-
     </div>
-
-
-
     <footer>
         <div>
             <img src="../home-page/assets/4Logo.png" alt="footer Image" />
@@ -297,338 +315,3 @@
 </body>
 
 </html>
-<!--<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills</title>
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <header>
-        <img src="/home-page/assets/Logo.png" alt="Header Image">
-        <nav>
-            <ul>
-                <li><a href="http://127.0.0.1:5500/home-page/index.html">Home</a></li>
-                <li><a href="http://127.0.0.1:5500/skills-page/index.html" class="active-page">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#Recommendations">Recommendations</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="skills-Languages">
-        <h2>Skills & Languages</h2>
-        <p class="description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-            consequat duis enim velit mollit. lorem ipsum</p>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Front End Development</h3>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>Html</span>
-                        <span class="percentage">90%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>CSS</span>
-                        <span class="percentage">85%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>Js</span>
-                        <span class="percentage">80%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>PHP</span>
-                        <span class="percentage">75%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>WordPress</span>
-                        <span class="percentage">85%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>Hindi</span>
-                        <span class="percentage">90%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>English</span>
-                        <span class="percentage">85%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Back End Development</h3>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>NodeJS</span>
-                        <span class="percentage">90%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>SSR</span>
-                        <span class="percentage">85%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Front End Development</h3>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>Html</span>
-                        <span class="percentage">90%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>CSS</span>
-                        <span class="percentage">85%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>Js</span>
-                        <span class="percentage">80%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>PHP</span>
-                        <span class="percentage">75%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>WordPress</span>
-                        <span class="percentage">85%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>Hindi</span>
-                        <span class="percentage">90%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>English</span>
-                        <span class="percentage">85%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Back End Development</h3>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>NodeJS</span>
-                        <span class="percentage">90%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-info">
-                        <span>SSR</span>
-                        <span class="percentage">85%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-                                         <div id="skills-Languages">
-                                          <div class="skills-container" id="skillsContainer">
-                                          New skill categories will be appended here 
-                                          </div>
-        </div>
-        <button class="btn-primary" id="openModal" style="align-items: center;">ADD SKILL</button>
-
-        <div id="addSkillModal" class="modal">
-            <div class="modal-content">
-                <h1>Add Skill</h1>
-                <form id="addSkillForm">
-                    <div class="form-group">
-                        <label for="domain">Domain</label>
-                        <input type="text" id="domain" name="domain" placeholder="Front End Developer" required>
-                    </div>
-        
-                    <div class="skills-section">
-                        <label><h3>Skills</h3></label>
-                        <div class="skills-header">
-                            <span>Skill</span>
-                            <span>Proficiency (%)</span>
-                        </div>
-        
-                        <div id="skillsWrapper">
-                            <div class="skills-row">
-                                <input type="text" class="skill-input" name="skill[]">
-                                <input type="number" class="proficiency-input" name="proficiency[]" min="0" max="100">
-                            </div>
-                        </div>
-                        <div id="skillsWrapper">
-                            <div class="skills-row">
-                                <input type="text" class="skill-input" name="skill[]">
-                                <input type="number" class="proficiency-input" name="proficiency[]" min="0" max="100">
-                            </div>
-                        </div>
-                        <div id="skillsWrapper">
-                            <div class="skills-row">
-                                <input type="text" class="skill-input" name="skill[]">
-                                <input type="number" class="proficiency-input" name="proficiency[]" min="0" max="100">
-                            </div>
-                        </div>
-                        <div id="skillsWrapper">
-                            <div class="skills-row">
-                                <input type="text" class="skill-input" name="skill[]">
-                                <input type="number" class="proficiency-input" name="proficiency[]" min="0" max="100">
-                            </div>
-                        </div>
-                        <div id="skillsWrapper">
-                            <div class="skills-row">
-                                <input type="text" class="skill-input" name="skill[]">
-                                <input type="number" class="proficiency-input" name="proficiency[]" min="0" max="100">
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="form-actions">
-                        <button type="submit" class="add-skill-btn">ADD SKILL</button>
-                        <button type="button" class="cancel-btn" id="cancelModal">CANCEL</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-
-
-    <footer>
-        <div>
-            <img src="/home-page/assets/4Logo.png" alt="footer Image" />
-        </div>
-        <div style="
-              display: flex;
-              margin-top: 20px;
-              margin-bottom: 20px;
-              margin-left: 20px;
-            ">
-            <img src="/home-page/assets/Logo.png" alt="main logo" style="width: 170px" />
-        </div>
-        <div class="footer-container">
-            <div class="rating-icons">
-                <img src="/home-page/assets/Rectangle 97.png" alt="Rating" />
-                4.5/5 rating on Lorem
-                <img src="/home-page/assets/Rectangle 99.png" alt="Rating" />
-                9/10 rating on Ipsum
-                <img src="/home-page/assets/Rectangle 100.png" alt="Rating" />
-                4.5/5 Rating on dorel
-            </div>
-            <div class="quick-links">
-                <h3>Quick Links</h3>
-                <a href="http://127.0.0.1:5500/home-page/index.html">Home</a>
-                <a href="http://127.0.0.1:5500/skills-page/index.html">Skills</a>
-                <a href="#">Education</a>
-                <a href="#">Projects</a>
-                <a href="#">Recommendations</a>
-            </div>
-            <div class="quick-links">
-                <h3>Portfolio</h3>
-                <a href="#">Frontend Development</a>
-                <a href="#">Backend Development</a>
-                <a href="#">Website Design</a>
-                <a href="#">Machine Learning</a>
-                <a href="#">Problem Solving & DSA</a>
-            </div>
-            <div class="social-icons">
-                <h3>Connect</h3>
-                <a href="https://www.linkedin.com/in/mudit-jain-4855b5245"><img src="/home-page/assets/LinkedIn.png"
-                        alt="Logo" /></a>
-                <a href="https://www.instagram.com/muditjain_30/"><img src="/home-page/assets/Instagram.png"
-                        alt="Logo" /></a>
-                <a href="https://www.facebook.com/mudit.jain.716"><img src="/home-page/assets/Facebook.png"
-                        alt="Logo" /></a>
-            </div>
-        </div>
-        <p>&copy; 2024 Copyright, All Rights Reserved</p>
-    </footer>
-    <script src="index.js"></script>
-</body>
-
-</html>-->
