@@ -1,16 +1,57 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var prevBtn = document.querySelector('.prev');
-    var nextBtn = document.querySelector('.next');
-    var carouselInner = document.querySelector('.carousel-inner');
-    var currentIndex = 0;
-
-    prevBtn.addEventListener('click', function () {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : 2;
-        carouselInner.style.transform = 'translateX(-' + currentIndex * 100 + '%)';
+document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('.card-wrapper', {
+        loop: true,
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        initialSlide:2,
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        }
     });
+});
 
-    nextBtn.addEventListener('click', function () {
-        currentIndex = (currentIndex < 2) ? currentIndex + 1 : 0;
-        carouselInner.style.transform = 'translateX(-' + currentIndex * 100 + '%)';
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+
+      console.log('Name:', name);
+      console.log('Email:', email);
+      console.log('Subject:', subject);
+      console.log('Message:', message);
+
+      alert('Message sent successfully!');
+
+      document.getElementById('contactForm').reset();
     });
+  });
+
+
+const hamburger = document.getElementById('hamburger');
+const navList = document.getElementById('nav-list');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navList.classList.toggle('show');
 });

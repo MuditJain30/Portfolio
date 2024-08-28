@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
@@ -20,28 +24,29 @@ header {
   padding: 30px 100px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
-  width: 100vw;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   z-index: 10000;
   height: 120px;
+  width: 100vw;
 
   img {
       width: 100px;
   }
 }
 
-header nav ul {
+nav ul {
   display: flex;
   align-items: center;
   list-style: none;
 }
 
-header nav ul li {
-  margin: 0 20px;
+nav ul li {
+  margin: 0 10px;
 }
 
-header nav ul li a {
+nav ul li a {
   text-align: center;
   padding: 10px 15px;
   text-decoration: none;
@@ -55,6 +60,19 @@ header nav ul li a {
   color: black;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+  transition: all 0.3s ease-in-out;
+}
 
 #home {
   height: 100vh;
@@ -140,7 +158,7 @@ header nav ul li a {
   height: auto;
 }
 
-#projects,#Recommendations,#contact,footer{
+#projects,#Recommendations,#carousel,#contact,footer{
   margin-inline:100px;
 }
 
@@ -213,7 +231,7 @@ header nav ul li a {
 }
 
 #Recommendations{
-  padding: 50px 20px;
+  padding: 0px 20px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -221,6 +239,65 @@ header nav ul li a {
   align-items: center;
 }
 
+
+#carousel{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.card-wrapper{
+  max-width: 1100px;
+  margin: 0 60px 35px;
+  padding:20px 30px;
+}
+.card-list .card-item{
+  list-style: none;
+  text-align: left;
+  width: 300px;
+  display: block;
+  background-color: white;
+  padding: 30px;
+}
+.review{
+  font-weight: bold;
+  margin-top: 10px;
+}
+.review-description{
+  font-size: 0.9rem;
+  color: #767676;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.outer-div{
+  margin-top: 20px;
+  display: flex; 
+  align-items: center;
+}
+.inner-div{
+  margin-left: 30px;
+  display: flex; 
+  flex-direction: column;
+}
+.acc-name{
+  font-weight: bold;
+}
+.designation{
+  color: #767676;
+  font-size: 0.9em;
+}
+.card-wrapper .swiper-pagination-bullet{
+  background: #FFB400;
+  opacity: 0.5;
+}
+.card-wrapper .swiper-pagination-bullet-active{
+  opacity: 1;
+}
+.card-wrapper .swiper-slide-button{
+  display: none;
+}
 #contact {
   padding: 50px 20px;
 }
@@ -389,92 +466,146 @@ footer p {
   color: #767676;
 }
 
-.carousel {
-  position: relative;
-  width: 80%;
-  max-width: 1000px;
-  margin: 0 auto;
-  overflow: hidden;
-}
 
-.carousel-inner {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
+@media only screen and (max-width: 1200px) {
 
-.carousel-item {
-  min-width: 100%;
-  box-sizing: border-box;
-}
-
-.recommendation-card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.profile img {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
-
-.profile-info h4 {
-  margin: 0;
-  font-size: 1.2em;
-}
-
-.profile-info p {
-  margin: 0;
-  color: #555;
-}
-
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
-}
-
-/* Media query for mobile devices */
-@media only screen and (max-width: 1000px) {
   header {
-    flex-direction: column;
-    gap: 15px;
+    padding: 20px 50px;
+    justify-content: space-between;
   }
 
-  header nav ul {
+  nav ul {
+    position: absolute;
+    top: 120px;
+    right: 0;
+    background-color: #ffffff;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .intro {
+    height: auto;
+    padding: 20px;
+    max-width: 100%;
+    margin-top: 140px;
+  }
+
+  .intro1,
+  .intro2 {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .intro1 {
     flex-direction: column;
   }
 
-  #home {
-    flex-direction: column;
+  .intro h1 {
+    font-size: 45px;
+  }
+
+  .intro p {
+    width: auto;
+    margin-block: 30px;
   }
 
   .hero-image {
     display: none;
   }
+
+  #home {
+    padding-inline: 20px;
+  }
+
+  #projects,
+  #Recommendations,
+  #contact,
+  footer {
+    margin-inline: 20px;
+  }
+
+  .project-title {
+    font-size: xx-large;
+  }
+
+  .description1{
+      width: auto;
+      margin-block-end: 30px;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .project img {
+    width: 100%;
+  }
+
+  .recommendation-title{
+    margin-top: -80px;
+    font-size: xx-large;
+  }
+
+  .description2{
+      width: auto;
+      margin-block-end: 50px;
+  }
+
+  .carousel{
+    width: 100%;
+  }
+
+  .contact-container {
+    margin-top: -50px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-info,
+  .form-container {
+    width: 100%;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .social-icons,.rating-icons{
+    display: none;
+  }
+
 }
